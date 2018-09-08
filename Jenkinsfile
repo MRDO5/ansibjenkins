@@ -13,7 +13,7 @@ pipeline {
         stages{
 	    stage('Checkout') {
 		steps {
-		   checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'jenkins-lts'], [$class: 'WipeWorkspace']], submoduleCfg: [], userRemoteConfigs: [[url: 'git@gitlab.com:mdanielyan/jenkins-lts.git']]])
+		   checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'git@gitlab.com:mdanielyan/jenkins-lts.git']]])
 			}
 		}
  	}
