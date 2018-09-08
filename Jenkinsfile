@@ -17,7 +17,6 @@ pipeline {
  			}
 		}
 
-            stage ('Jenkins-Install') {
 			stage('Syntax check') {
 				steps {
 				   ansiColor('xterm') {
@@ -43,6 +42,5 @@ pipeline {
                        }
                }
          }
-    }
 
 
