@@ -13,7 +13,8 @@ pipeline {
         stages{
 	    stage('Checkout') {
 		steps {
-		   checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'git@gitlab.com:mdanielyan/jenkins-lts.git']]])
+		   checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[ credentialsId: gitlab-token,  url: 'git@gitlab.com:mdanielyan/jenkins-lts.git']]])
+
 			}
 		}
  	}
