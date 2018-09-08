@@ -17,7 +17,7 @@ pipeline {
  			}
 		}
 
-            stage ('Check prlctl module') {
+            stage ('Jenkins-Install') {
 		    parallel {
 			stage('Syntax check') {
 				steps {
