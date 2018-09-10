@@ -9,7 +9,7 @@ pipeline {
 
 	environment {
 		ANSIBLE_CONFIG = "/etc/ansible/ansible.cfg"
-
+		}
         stages{
 	    stage('Checkout') {
 		steps {
@@ -18,7 +18,7 @@ pipeline {
 		}
  	}
     }
-}
+
 
 
 
