@@ -3,6 +3,10 @@ pipeline {
 	  label 'master'
         }
 
+	triggers {
+           pollSCM('* * * * *')
+	}
+
 	environment {
 		ANSIBLE_CONFIG = "/etc/ansible/ansible.cfg"
 
