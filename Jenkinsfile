@@ -8,7 +8,7 @@ pipeline {
 	}
 
 	environment {
-		ANSIBLE_CONFIG = "/etc/ansible/ansible.cfg"
+		ANSIBLE_CONFIG = "Jenkins-LTS/ansible.cfg"
 		}
         stages{
 	    stage('Checkout') {
