@@ -18,7 +18,6 @@ pipeline {
 		}
 			stage('Syntax check') {
 				steps {
- 			           ansiColor('xterm') {
 				      ansiblePlaybook become: true, 
 				      colorized: true,
 				      credentialsId: '7980492c-7fa3-41b6-9c8e-b44d3f7ce236',
@@ -27,7 +26,7 @@ pipeline {
 				      playbook: 'Jenkins-LTS/main.yml'
 					} 
 				    }
-				}
+				
 			 stage('Check provision for virtual machines') {
 				 steps {
 				   ansiColor('xterm') {
